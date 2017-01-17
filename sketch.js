@@ -116,7 +116,7 @@ function QuakeDots(){
 }
 
 function results() {
-    image(myResult,0,0,windowWidth,windowHeight);
+    image(myImage,0,0,windowWidth,windowHeight);
 }
 
 function windowResized(){
