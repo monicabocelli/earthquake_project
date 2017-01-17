@@ -30,7 +30,7 @@ function draw(){
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.1);    
     
-    var magnitude = int(map(value, 0, 10000, 0, 10));
+    var magnitude = int(map(value, 0, 500, 0, 10)); 
     
     if (value > 0){
         
@@ -83,9 +83,10 @@ function draw(){
     //draw dots and given methods (actions)
       noStroke();
       fill(0);
-      for (var i = 0; i < value*10; i++){
+      for (var i = 0; i < value*100; i++){
         dots[i].move();
         dots[i]. display();
+        
       }
           
 
@@ -94,10 +95,10 @@ function draw(){
 
 function deviceShaken(){
     
-    value = (pAccelerationX * pAccelerationY * pAccelerationZ)/100; 
+    value = (pAccelerationX * pAccelerationY * pAccelerationZ)/300;   
    
     //create objects
-    for (var i = 0; i < value*10; i++){
+    for (var i = 0; i < value*100; i++){
         dots.push(new QuakeDots());
     } 
     
@@ -105,9 +106,10 @@ function deviceShaken(){
 
 
 function QuakeDots(){
-
+    
+    
     var a = random(0,360);
-    var b = random(0,value);//r = value = 30
+    var b = random(0,value * 1.6);
     var x = sin(a) * b; // mi dà un numero che va da -b a b
     var y = cos(a) * b; // mi dà un numero che va da -b a b
     var d = dist(width/2,height/2, width/2, height/2 + x/2);
@@ -116,23 +118,23 @@ function QuakeDots(){
     
     this.xdot = random(width/2 - d, width/2 + d); //according to ellipse area
     this.ydot = random(height/2 - d, height/2 + d); //according to ellipse area
-    this.diameter = 4;
-    this.speed = 2; //according to magnitude
+    this.diameter = 6;
+    this.speed = 4; //according to magnitude
         
 
-    this.move = function(){
+this.move = function(){
     this.xdot += random(-this.speed,this.speed);
     this.ydot += random(-this.speed,this.speed);
  
-    }
+}
 
-    this.display = function(){
+this.display = function(){
     if(this.xdot > width/2 + d || this.xdot < width/2 - d || this.ydot > height/2 + d || this.ydot < height/2 - d){
        this.xdot = random(width/2 - d, width/2 + d);
        this.ydot = random(height/2 - d, height/2 + d); 
        }
     ellipse(this.xdot, this.ydot, this.diameter, this.diameter);
-    };
+};
  
 }
     
