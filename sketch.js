@@ -60,7 +60,7 @@ function draw(){
        
   button2 = createButton('see results');
   button2.position(width/2,height/3);
-  button2.mousePressed(results);    
+  button2.touchStarted(results);    
         
     }    
     
