@@ -29,6 +29,31 @@ function draw(){
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.2);    
     
+    
+//prueba
+    
+    button1 = createButton("See results");
+    button1.position(width/2,(height/10)*9);
+    button1.mousePressed(results);
+        
+    button2 = createButton("Try again");
+    button2.position(width/2, (height/10)*9.5);
+    button2.mousePressed(clearEverything);
+        
+        
+    }    
+    
+    function results() {
+     image(myImage,0,0,windowWidth,windowHeight);
+    }
+
+    function clearEverything() {
+     background(237, 37, 154);
+     }
+
+//fin prueba
+
+
     var magnitude = int(map(value, 0, pAccelerationX * pAccelerationY, 0, 10));
     
     if (magnitude > 0){
@@ -62,24 +87,7 @@ function draw(){
     textStyle(NORMAL);    
     text(value, width/2, height - height/8);
         
-    button1 = createButton("See results");
-    button1.position(width/2,(height/10)*9);
-    button1.mousePressed(results);
-        
-    button2 = createButton("Try again");
-    button2.position(width/2, (height/10)*9.5);
-    button2.mousePressed(clearEverything);
-        
-        
-    }    
-    
-    function results() {
-     image(myImage,0,0,windowWidth,windowHeight);
-    }
 
-    function clearEverything() {
-     background(237, 37, 154);
-     }
    
     //draw dots and given methods (actions)
       noStroke();
