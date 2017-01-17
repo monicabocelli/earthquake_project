@@ -19,7 +19,6 @@ function setup(){
     fill(237,37,154);
 }
 
-
 function draw(){
      background(204);
      angleMode(DEGREES);
