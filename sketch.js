@@ -25,8 +25,9 @@ function setup(){
 function draw(){
      background(204);
      angleMode(DEGREES);
-   
-   
+    
+    rect(40,40,50,20)
+    fill (237, 37, 154)
     
 //prueba
     
@@ -39,16 +40,6 @@ function draw(){
   ptouchIsDown = touchIsDown;
 }  
 
-function touchMoved(){
-
-  return false;
-}
-
-function touchEnded(){
- 
-  return false;
-}
-
 //fin prueba
     
      textSize(height/20);
@@ -56,11 +47,11 @@ function touchEnded(){
      textStyle(BOLD);
      fill(0);
      noStroke();
-     text("SHAKE YOUR DEVICE", width/2,height - height/1.2);    
+     text("SHAKE YOUR DEVICE", width/2,height - height/1.1);    
     
-    var magnitude = int(map(value, 0, pAccelerationX * pAccelerationY, 0, 10));
+    var magnitude = int(map(value, 0, 10000, 0, 10));
     
-    if (magnitude > 0){
+    if (value > 0){
         
         //CREATE THE ELLIPSE AREA
     var x = width/2;
@@ -120,7 +111,7 @@ function touchEnded(){
 
 function deviceShaken(){
     
-    value = pAccelerationX * pAccelerationY;   
+    value = (pAccelerationX * pAccelerationY * pAccelerationZ)/10; 
    
     //create objects
     for (var i = 0; i < value*10; i++){
