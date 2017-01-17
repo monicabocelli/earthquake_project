@@ -2,6 +2,17 @@ var dots = [];
 
 var value = 0;  //starting value of earthquake
 
+var button1;
+var button2;
+var button3;
+var myImage;
+var myResults;
+
+function preload() {
+    myResult = loadImage("images/prova2.jpg");
+    myImage = loadImage("images/prova1.png");
+}
+    
 function setup(){
      createCanvas(windowWidth, windowHeight);
 }
@@ -51,10 +62,14 @@ function draw(){
     textStyle(NORMAL);    
     text(value, width/2, height - height/8);
         
-    textStyle(BOLD);
-    textSize(height/30);
-    text('SEE RESULTS', width/2, height - height/12);
+  //  textStyle(BOLD);
+  //  textSize(height/30);
+  //  text('SEE RESULTS', width/2, height - height/12);
 
+    button1 = createButton("See results");
+    button1.position(width/2,height/3);
+    button1.touchStarted(results);
+         
     }    
     
    
@@ -104,6 +119,9 @@ function QuakeDots(){
     
 }
 
+function results() {
+    image(myResult,0,0,windowWidth,windowHeight);
+}
 
 function windowResized(){
     resizeCanvas(windowWidth,windowHeight);
