@@ -22,9 +22,6 @@ function draw(){
      background(204);
      angleMode(DEGREES);
     
-    rect(100,100,50,80);
-    fill(37, 51, 237);
-    
      textSize(height/20);
      textAlign(CENTER);
      textStyle(BOLD);
@@ -64,22 +61,14 @@ function draw(){
     textAlign(CENTER);
     textStyle(NORMAL);    
     text(value, width/2, height - height/8);
-
-    button2 = createButton("Try again");
-    button2.position(width/2,height/2);
-    button2.touchStarted(clearEverything);
-    button2.align(CENTER);
-    textSize(height/20);
-    textAlign(CENTER);
-    textStyle(BOLD);
         
     button1 = createButton("See results");
     button1.position(width/2,(height/10)*9);
     button1.touchStarted(results);
-    button1.align(CENTER);
-    textSize(height/20);
-    textAlign(CENTER);
-    textStyle(BOLD);
+        
+    button2 = createButton("Try again");
+    button2.position(width/2, (height/10)*9.5);
+    button2.touchStarted(clearEverything);
         
         
     }    
@@ -139,10 +128,6 @@ function clearEverything() {
   background(237, 37, 154);
 }
 
-if (touches[100,100,50,80]){
- background(255);
-
-}
 
 function windowResized(){
     resizeCanvas(windowWidth,windowHeight);
