@@ -64,11 +64,11 @@ function draw(){
         
     button1 = createButton("See results");
     button1.position(width/2,(height/10)*9);
-    button1.touchStarted(results);
+    button1.mousePressed(results);
         
     button2 = createButton("Try again");
     button2.position(width/2, (height/10)*9.5);
-    button2.touchStarted(clearEverything);
+    button2.mousePressed(clearEverything);
         
         
     }    
