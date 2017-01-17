@@ -21,7 +21,7 @@ function draw(){
     setShakeThreshold(1);
     var magnitude = int(map(value, 1, 800, 0, 10));
     
-    if (magnitude > 0){
+    if (value > 1){
         
         //CREATE THE ELLIPSE AREA
     var x = width/2;
