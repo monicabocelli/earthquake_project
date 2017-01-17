@@ -64,11 +64,11 @@ function draw(){
          //buttons  
           
     button1 = createButton("See results");
-    button1.position(width/5,(height/15)*13);
+    button1.position(width/5,(height/15)*14);
     button1.touchStarted(results);
         
     button2 = createButton("Try again");
-    button2.position((width/5)*4, (height/15)*13);
+    button2.position((width/5)*4, (height/15)*14);
     button2.touchStarted(clearEverything);
     
    // button3 = createButton('imagens');
@@ -140,12 +140,12 @@ this.display = function(){
     // result buttons
       function results() {
      image(myImage,0,0,windowWidth,windowHeight);
-    button1.hide();
+   // button1.hide();
     }
 
     function clearEverything() {
     background(255);
-    button2.hide();
+   // button2.hide();
      }
 
 function windowResized(){
