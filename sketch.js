@@ -76,7 +76,7 @@ function draw(){
     button3.position(width/3,height/3);
     button3.mouseIsPressed(imagens);    
         
- 
+    }
       
    
     //draw dots and given methods (actions)
@@ -88,8 +88,7 @@ function draw(){
       }
           
 
- 
-}
+
 }
 
 function deviceShaken(){
@@ -123,6 +122,7 @@ function QuakeDots(){
     this.display = function(){
       ellipse(this.xdot, this.ydot, this.diameter, this.diameter);
     };
+}
     
     
     // result buttons
@@ -137,5 +137,4 @@ function QuakeDots(){
 function windowResized(){
     resizeCanvas(windowWidth,windowHeight);
      }
-}
 
