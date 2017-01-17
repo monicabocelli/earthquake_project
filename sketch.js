@@ -26,6 +26,19 @@ function draw(){
      background(204);
      angleMode(DEGREES);
     
+//prueba
+    
+        
+   if (ptouchIsDown && touchIsDown){
+    stroke(255, 0, 0);
+    line(touchX, touchY, ptouchX, ptouchY);
+  }
+  
+  ptouchIsDown = touchIsDown;
+}  
+
+//fin prueba
+    
      textSize(height/20);
      textAlign(CENTER);
      textStyle(BOLD);
@@ -75,15 +88,7 @@ function draw(){
         dots[i].move();
         dots[i]. display();
           
-     //buttons
-    
-          if (ptouchIsDown && touchIsDown){
-    stroke(255, 0, 0);
-    line(touchX, touchY, ptouchX, ptouchY);
-  }
-  
-  ptouchIsDown = touchIsDown;
-}    
+     //buttons  
           
     button1 = createButton("See results");
     button1.position(width/2,(height/10)*9);
