@@ -64,11 +64,11 @@ function draw(){
          //buttons  
           
     button1 = createButton("See results");
-    button1.position(width/5,(height/15)*14);
+    button1.position(width/7,(height/15)*14);
     button1.touchStarted(results);
         
     button2 = createButton("Try again");
-    button2.position((width/5)*4, (height/15)*14);
+    button2.position((width/7)*5, (height/15)*14);
     button2.touchStarted(clearEverything);
     
    // button3 = createButton('imagens');
@@ -144,7 +144,7 @@ this.display = function(){
     }
 
     function clearEverything() {
-    background(255);
+    background(204);
    // button2.hide();
      }
 
