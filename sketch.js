@@ -15,6 +15,8 @@ function preload() {
     
 function setup(){
      createCanvas(windowWidth, windowHeight);
+    rect(40,40,40,40);
+    fill(237,37,154);
 }
 
 
