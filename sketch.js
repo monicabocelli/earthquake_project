@@ -1,6 +1,6 @@
 var dots = [];
 
-var value = 0;  //starting value of earthquake
+var value = 1;  //starting value of earthquake
     
 
 function setup(){
@@ -16,9 +16,10 @@ function draw(){
      textStyle(BOLD);
      fill(0);
      noStroke();
-     text("SHAKE YOUR DEVICE", width/2,height - height/1.2);    
+     text("SHAKE YOUR DEVICE", width/2,height - height/1.2);  
     
-    var magnitude = int(map(value, 0, pAccelerationX * pAccelerationY, 0, 10));
+    setShakeThreshold(1);
+    var magnitude = int(map(value, 1, pAccelerationX * pAccelerationY, 0, 10));
     
     if (magnitude > 0){
         
