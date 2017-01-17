@@ -140,12 +140,12 @@ this.display = function(){
     // result buttons
       function results() {
      image(myImage,0,0,windowWidth,windowHeight);
-    button.hide();
+    button1.hide();
     }
 
     function clearEverything() {
     background(255);
-    button.hide();
+    button2.hide();
      }
 
 function windowResized(){
