@@ -2,9 +2,6 @@ var dots = [];
 
 var value = 0;  //starting value of earthquake
 
-//botones
-var button1;
-
 function setup(){
      createCanvas(windowWidth, windowHeight);
 }
@@ -54,15 +51,10 @@ function draw(){
     textStyle(NORMAL);    
     text(value, width/2, height - height/8);
         
- //   textStyle(BOLD);
- //   textSize(height/30);
- //   text('SEE RESULTS', width/2, height - height/12);
- 
-        //botones
-  button1 = createButton("See results");
-  button1.position(width/2,height/3);
-  button1.touchStarted(results); //en vez de mousePressed para touch es touchStarted
-    
+    textStyle(BOLD);
+    textSize(height/30);
+    text('SEE RESULTS', width/2, height - height/12);
+
     }    
     
    
@@ -111,13 +103,6 @@ function QuakeDots(){
     };
     
 }
-
-
-//botones
-function results() {
-  background(50);
-}
-
 
 
 function windowResized(){
