@@ -76,9 +76,8 @@ function draw(){
     button3.position(width/3,height/3);
     button3.mouseIsPressed(imagens);    
         
-    }
-        
-
+ 
+      
    
     //draw dots and given methods (actions)
       noStroke();
@@ -91,7 +90,7 @@ function draw(){
 
  
 }
-   
+}
 
 function deviceShaken(){
     
