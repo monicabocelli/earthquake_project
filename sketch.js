@@ -4,18 +4,6 @@ var value = 0;  //starting value of earthquake
 
 //botones
 var button1;
-var button2;
-var button3;
-var myImage;
-var myResults;
-
-function preload() {
-    myResult = loadImage("images/prova2.jpg");
-}
-function preload(){
-    myImage = loadImage("images/prova1.png")    
-}
-    
 
 function setup(){
      createCanvas(windowWidth, windowHeight);
