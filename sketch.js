@@ -139,13 +139,11 @@ this.display = function(){
     
     // result buttons
       function results() {
-     button1.hide();
      image(myImage,0,0,windowWidth,windowHeight);
   
     }
 
     function clearEverything() {
-    button2.hide();
     background(204);
  
      }
