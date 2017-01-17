@@ -19,7 +19,7 @@ function draw(){
      text("SHAKE YOUR DEVICE", width/2,height - height/1.2);  
     
     setShakeThreshold(1);
-    var magnitude = int(map(value, 1, pAccelerationX * pAccelerationY, 0, 10));
+    var magnitude = int(map(value, 1, 800, 0, 10));
     
     if (magnitude > 0){
         
@@ -74,7 +74,7 @@ function draw(){
 
 function deviceShaken(){
     
-    value = pAccelerationX * pAccelerationY;   
+    value = pAccelerationX * pAccelerationY * pAccelerationZ ;   
    
     //create objects
     for (var i = 0; i < value*10; i++){
