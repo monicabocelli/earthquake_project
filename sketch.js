@@ -14,7 +14,7 @@ function preload() {
 }
     
 function setup(){
-     createCanvas(windowWidth, windowHeight);
+    createCanvas(windowWidth, windowHeight);
     rect(40,40,40,40);
     fill(237,37,154);
 }
@@ -95,7 +95,7 @@ function draw(){
 
 function deviceShaken(){
     
-    value = (pAccelerationX * pAccelerationY * pAccelerationZ)/10; 
+    value = (pAccelerationX * pAccelerationY * pAccelerationZ)/100; 
    
     //create objects
     for (var i = 0; i < value*10; i++){
@@ -121,6 +121,7 @@ function QuakeDots(){
       this.xdot += random(-this.speed,this.speed);
       this.ydot += random(-this.speed,this.speed);
     }
+    
     this.display = function(){
       ellipse(this.xdot, this.ydot, this.diameter, this.diameter);
     };
