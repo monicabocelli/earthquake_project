@@ -73,6 +73,13 @@ function draw(){
         
     }    
     
+    function results() {
+     image(myImage,0,0,windowWidth,windowHeight);
+    }
+
+    function clearEverything() {
+     background(237, 37, 154);
+     }
    
     //draw dots and given methods (actions)
       noStroke();
@@ -119,15 +126,6 @@ function QuakeDots(){
     };
     
 }
-
-function results() {
-    image(myImage,0,0,windowWidth,windowHeight);
-}
-
-function clearEverything() {
-  background(237, 37, 154);
-}
-
 
 function windowResized(){
     resizeCanvas(windowWidth,windowHeight);
