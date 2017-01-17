@@ -26,9 +26,6 @@ function draw(){
      background(204);
      angleMode(DEGREES);
     
-    rect(40,40,50,20)
-    fill (237, 37, 154)
-    
 //prueba
     
         
@@ -39,6 +36,16 @@ function draw(){
   
   ptouchIsDown = touchIsDown;
 }  
+
+function touchMoved(){
+
+  return false;
+}
+
+function touchEnded(){
+ 
+  return false;
+}
 
 //fin prueba
     
