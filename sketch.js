@@ -65,6 +65,7 @@ function draw(){
     button1 = createButton("See results");
     button1.position(width/2,(height/10)*9);
     button1.touchStarted(results);
+    button1.align(CENTER);
     textSize(height/20);
     textAlign(CENTER);
     textStyle(BOLD);
@@ -72,6 +73,7 @@ function draw(){
     button2 = createButton("Try again");
     button2.position(width/2,(height/10)*9.5);
     button2.touchStarted(clearEverything);
+    button2.align(CENTER);
     textSize(height/20);
     textAlign(CENTER);
     textStyle(BOLD);
@@ -130,7 +132,7 @@ function results() {
 }
 
 function clearEverything() {
-  background(50);
+  background(237, 37, 154);
 }
 
 function windowResized(){
