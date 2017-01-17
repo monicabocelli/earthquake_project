@@ -1,6 +1,6 @@
 var dots = [];
 
-var value = 1;  //starting value of earthquake
+var value = 0;  //starting value of earthquake
     
 
 function setup(){
@@ -18,10 +18,10 @@ function draw(){
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.2);  
     
-    setShakeThreshold(1);
-    var magnitude = int(map(value, 1, 800, 0, 10));
+    setShakeThreshold(0);
+    var magnitude = int(map(value, 0, pAccelerationX * pAccelerationY * pAccelerationZ, 0, 10));
     
-    if (value > 1){
+    if (value > 0){
         
         //CREATE THE ELLIPSE AREA
     var x = width/2;
