@@ -8,6 +8,8 @@ var button3;
 var myImage;
 var myResults;
 
+var ptouchIsDown;
+
 function preload() {
     myResult = loadImage("images/prova1.png");
     myImage = loadImage("images/prova2.jpg");
@@ -15,6 +17,8 @@ function preload() {
     
 function setup(){
      createCanvas(windowWidth, windowHeight);
+    
+     ptouchIsDown = touchIsDown;
 }
 
 
@@ -29,35 +33,6 @@ function draw(){
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.2);    
     
-    
-//prueba
-    
-    button1 = createButton("See results");
-    button1.position(width/2,(height/10)*9);
-    button1.mouseIsPressed(results);
-        
-    button2 = createButton("Try again");
-    button2.position(width/2, (height/10)*9.5);
-    button2.mouseIsPressed(clearEverything);
-    
-    button3 = createButton('imagens');
-    button3.position(width/3,height/3);
-    button3.mouseIsPressed(imagens);
-        
-        
-    }    
-    
-    function results() {
-     image(myImage,0,0,windowWidth,windowHeight);
-    }
-
-    function clearEverything() {
-     background(237, 37, 154);
-     }
-
-//fin prueba
-
-
     var magnitude = int(map(value, 0, pAccelerationX * pAccelerationY, 0, 10));
     
     if (magnitude > 0){
@@ -99,9 +74,30 @@ function draw(){
       for (var i = 0; i < value*10; i++){
         dots[i].move();
         dots[i]. display();
-        
-      }
+          
+     //buttons
+    
+          if (ptouchIsDown && touchIsDown){
+    stroke(255, 0, 0);
+    line(touchX, touchY, ptouchX, ptouchY);
+  }
   
+  ptouchIsDown = touchIsDown;
+}    
+          
+    button1 = createButton("See results");
+    button1.position(width/2,(height/10)*9);
+    button1.mouseIsPressed(results);
+        
+    button2 = createButton("Try again");
+    button2.position(width/2, (height/10)*9.5);
+    button2.mouseIsPressed(clearEverything);
+    
+    button3 = createButton('imagens');
+    button3.position(width/3,height/3);
+    button3.mouseIsPressed(imagens);
+ 
+      }
 }
    
 
@@ -138,6 +134,14 @@ function QuakeDots(){
     };
     
 }
+    
+      function results() {
+     image(myImage,0,0,windowWidth,windowHeight);
+    }
+
+    function clearEverything() {
+     background(237, 37, 154);
+     }
 
 function windowResized(){
     resizeCanvas(windowWidth,windowHeight);
