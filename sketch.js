@@ -12,7 +12,6 @@ var myResults;
 function preload() {
     myResult = loadImage("images/prova2.jpg");
 }
-
 function preload(){
     myImage = loadImage("images/prova1.png")    
 }
@@ -72,7 +71,6 @@ function draw(){
  //   text('SEE RESULTS', width/2, height - height/12);
  
         //botones
-  createCanvas(windowWidth,windowHeight);
   button1 = createButton("See results");
   button1.position(width/2,height/3);
   button1.touchStarted(results); //en vez de mousePressed para touch es touchStarted
@@ -84,6 +82,7 @@ function draw(){
   button3 = createButton("See images");
   button3.position(width/3,height/3);
   button3.touchStarted(images);
+        
   background(50);
   noStroke();
         
