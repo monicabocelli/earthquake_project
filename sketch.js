@@ -66,15 +66,15 @@ function draw(){
           
     button1 = createButton("See results");
     button1.position(width/2,(height/10)*9);
-    button1.mouseIsPressed(results);
+    button1.touchStarted(results);
         
     button2 = createButton("Try again");
-    button2.position(width/2, (height/10)*9.5);
-    button2.mouseIsPressed(clearEverything);
+    button2.position(width/4, height/10);
+    button2.touchStarted(clearEverything);
     
     button3 = createButton('imagens');
     button3.position(width/3,height/3);
-    button3.mouseIsPressed(imagens);    
+    button3.touchStarted(imagens);    
         
     }
       
