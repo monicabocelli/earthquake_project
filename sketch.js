@@ -1,11 +1,14 @@
 var dots = [];
 
 var value = 0;  //starting value of earthquake
+
+var button; 
     
 
 function setup(){
      createCanvas(windowWidth, windowHeight);
 }
+
 
 function draw(){
      background(204);
@@ -54,6 +57,10 @@ function draw(){
     textStyle(BOLD);
     textSize(height/30);
     text('SEE RESULTS', width/2, height - height/12);
+       
+  button2 = createButton('see results');
+  button2.position(width/2,height/3);
+  button2.mousePressed(results);    
         
     }    
     
@@ -103,5 +110,9 @@ function QuakeDots(){
       ellipse(this.xdot, this.ydot, this.diameter, this.diameter);
     };
     
+}
+
+  function results() {
+ background(50);
 }
 
