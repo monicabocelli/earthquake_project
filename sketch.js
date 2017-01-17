@@ -3,6 +3,16 @@ var dots = [];
 var value = 0;  //starting value of earthquake
 
 var button; 
+
+var myImage;
+function preload() {
+    myResult = loadImage("images/prova2.jpg");
+}
+
+function preload(){
+    myImage = loadImage("images/prova1.png")
+    
+}
     
 
 function setup(){
@@ -112,7 +122,7 @@ function QuakeDots(){
     
 }
 
-  function results() {
- background(50);
+function results() {
+    image(myResult,0,0,windowWidth,windowHeight);
 }
 
