@@ -140,8 +140,8 @@ function results() {
 function images(){
     image(myImage,0,0,windowWidth,windowHeight);
 }
-function clearEverything() {
-  background(50);
+//function clearEverything() {
+ // background(50);
 }
 function windowResized(){
     resizeCanvas(windowWidth,windowHeight);
