@@ -71,7 +71,7 @@ function draw(){
     textStyle(BOLD);
         
     button2 = createButton("Try again");
-    button2.position(width/2,(height/10)*9.5);
+    button2.position(width/2,(height/10)*8);
     button2.touchStarted(clearEverything);
     button2.align(CENTER);
     textSize(height/20);
