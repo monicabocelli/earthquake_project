@@ -77,7 +77,10 @@ function draw(){
     textSize(height/20);
     textAlign(CENTER);
     textStyle(BOLD);
-         
+        
+    rect(100,100,50,80)
+    fill(37, 51, 237)
+        
     }    
     
    
@@ -133,6 +136,11 @@ function results() {
 
 function clearEverything() {
   background(237, 37, 154);
+}
+
+if (touches[100,100,50,80]){
+ background(255);
+
 }
 
 function windowResized(){
