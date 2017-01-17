@@ -63,8 +63,12 @@ function draw(){
     text(value, width/2, height - height/8);
 
     button1 = createButton("See results");
-    button1.position(width/2,(height/5)*6);
+    button1.position(width/2,(height/6)*5);
     button1.touchStarted(results);
+        
+    button2 = createButton("Try again");
+    button2.position(width/2,height/6,4.5);
+    button2.touchStarted(clearEverything);
          
     }    
     
@@ -117,6 +121,10 @@ function QuakeDots(){
 
 function results() {
     image(myImage,0,0,windowWidth,windowHeight);
+}
+
+function clearEverything() {
+  background(50);
 }
 
 function windowResized(){
