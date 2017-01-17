@@ -78,8 +78,8 @@ function draw(){
     textAlign(CENTER);
     textStyle(BOLD);
         
-    rect(100,100,50,80)
-    fill(37, 51, 237)
+    rect(100,100,50,80);
+    fill(37, 51, 237);
         
     }    
     
