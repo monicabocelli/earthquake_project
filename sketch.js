@@ -15,8 +15,6 @@ function preload() {
     
 function setup(){
     createCanvas(windowWidth, windowHeight);
-    rect(40,40,40,40);
-    fill(237,37,154);
 }
 
 function draw(){
@@ -66,16 +64,16 @@ function draw(){
          //buttons  
           
     button1 = createButton("See results");
-    button1.position(width/2,(height/10)*9);
+    button1.position(width/5,(height/15)*13);
     button1.touchStarted(results);
         
     button2 = createButton("Try again");
-    button2.position(width/4, height/10);
+    button2.position((width/5)*4, (height/15)*13);
     button2.touchStarted(clearEverything);
     
-    button3 = createButton('imagens');
-    button3.position(width/3,height/3);
-    button3.touchStarted(imagens);    
+   // button3 = createButton('imagens');
+   // button3.position(width/3,height/3);
+   // button3.touchStarted(imagens);    
         
     }
       
@@ -146,7 +144,7 @@ this.display = function(){
     }
 
     function clearEverything() {
-    background(237, 37, 154);
+    background(255);
     button.hide();
      }
 
