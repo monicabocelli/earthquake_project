@@ -9,8 +9,8 @@ var myImage;
 var myResults;
 
 function preload() {
-    myResult = loadImage("images/prova2.jpg");
-    myImage = loadImage("images/prova1.png");
+    myResult = loadImage("images/prova1.png");
+    myImage = loadImage("images/prova2.jpg");
 }
     
 function setup(){
