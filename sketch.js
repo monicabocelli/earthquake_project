@@ -82,10 +82,7 @@ function draw(){
   button3 = createButton("See images");
   button3.position(width/3,height/3);
   button3.touchStarted(images);
-        
-  background(50);
-  noStroke();
-        
+ 
     }    
     
    
