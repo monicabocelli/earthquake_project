@@ -61,10 +61,6 @@ function draw(){
     textAlign(CENTER);
     textStyle(NORMAL);    
     text(value, width/2, height - height/8);
-        
-  //  textStyle(BOLD);
-  //  textSize(height/30);
-  //  text('SEE RESULTS', width/2, height - height/12);
 
     button1 = createButton("See results");
     button1.position(width/2,height/3);
