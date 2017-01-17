@@ -8,8 +8,6 @@ var button3;
 var myImage;
 var myResults;
 
-var ptouchIsDown;
-
 function preload() {
     myResult = loadImage("images/prova1.png");
     myImage = loadImage("images/prova2.jpg");
@@ -17,37 +15,12 @@ function preload() {
     
 function setup(){
      createCanvas(windowWidth, windowHeight);
-    
-     ptouchIsDown = touchIsDown;
 }
 
 
 function draw(){
      background(204);
      angleMode(DEGREES);
-    
-//prueba
-    
-        
-   if (ptouchIsDown && touchIsDown){
-    stroke(255, 0, 0);
-    line(touchX, touchY, ptouchX, ptouchY);
-  }
-  
-  ptouchIsDown = touchIsDown;
-}  
-
-function touchMoved(){
-
-  return false;
-}
-
-function touchEnded(){
- 
-  return false;
-}
-
-//fin prueba
     
      textSize(height/20);
      textAlign(CENTER);
@@ -150,6 +123,7 @@ function QuakeDots(){
     
 }
     
+    // result buttons
       function results() {
      image(myImage,0,0,windowWidth,windowHeight);
     }
