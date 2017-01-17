@@ -62,6 +62,8 @@ function draw(){
     textStyle(NORMAL);    
     text(value, width/2, height - height/8);
         
+    }
+        
 
    
     //draw dots and given methods (actions)
@@ -70,6 +72,7 @@ function draw(){
       for (var i = 0; i < value*10; i++){
         dots[i].move();
         dots[i]. display();
+      }
           
      //buttons  
           
@@ -85,7 +88,6 @@ function draw(){
     button3.position(width/3,height/3);
     button3.mouseIsPressed(imagens);
  
-      }
 }
    
 
@@ -121,7 +123,6 @@ function QuakeDots(){
       ellipse(this.xdot, this.ydot, this.diameter, this.diameter);
     };
     
-}
     
     // result buttons
       function results() {
@@ -134,5 +135,6 @@ function QuakeDots(){
 
 function windowResized(){
     resizeCanvas(windowWidth,windowHeight);
+     }
 }
 
