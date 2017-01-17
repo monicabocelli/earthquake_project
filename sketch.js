@@ -75,14 +75,6 @@ function draw(){
   button1.position(width/2,height/3);
   button1.touchStarted(results); //en vez de mousePressed para touch es touchStarted
     
- // button2 = createButton("Try again");
- // button2.position(width/2,height/2,3);
- // button2.touchStarted(clearEverything); //agregar otro botono para las imagenes, definir las dimensiones...
-    
- // button3 = createButton("See images");
- // button3.position(width/3,height/3);
- // button3.touchStarted(images);
- 
     }    
     
    
@@ -136,14 +128,8 @@ function QuakeDots(){
 //botones
 function results() {
   background(50);
-    //  image(myResult,0,0,windowWidth,windowHeight);
 }
-//function images(){
-//    image(myImage,0,0,windowWidth,windowHeight);
-//}
-//function clearEverything() {
- // background(50);
-//}
+
 
 
 function windowResized(){
