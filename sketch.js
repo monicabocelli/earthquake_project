@@ -63,12 +63,18 @@ function draw(){
     text(value, width/2, height - height/8);
 
     button1 = createButton("See results");
-    button1.position(width/2,(height/6)*5);
+    button1.position(width/2,(height/10)*9);
     button1.touchStarted(results);
+    textSize(height/20);
+    textAlign(CENTER);
+    textStyle(BOLD);
         
     button2 = createButton("Try again");
-    button2.position(width/2,height/6,4.5);
+    button2.position(width/2,(height/10)*9.5);
     button2.touchStarted(clearEverything);
+    textSize(height/20);
+    textAlign(CENTER);
+    textStyle(BOLD);
          
     }    
     
