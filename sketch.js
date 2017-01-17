@@ -141,10 +141,12 @@ function QuakeDots(){
     // result buttons
       function results() {
      image(myImage,0,0,windowWidth,windowHeight);
+    button.hide();
     }
 
     function clearEverything() {
-     background(237, 37, 154);
+    background(237, 37, 154);
+    button.hide();
      }
 
 function windowResized(){
