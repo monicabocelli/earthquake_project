@@ -22,6 +22,9 @@ function draw(){
      background(204);
      angleMode(DEGREES);
     
+    rect(100,100,50,80);
+    fill(37, 51, 237);
+    
      textSize(height/20);
      textAlign(CENTER);
      textStyle(BOLD);
@@ -62,14 +65,6 @@ function draw(){
     textStyle(NORMAL);    
     text(value, width/2, height - height/8);
 
-    button1 = createButton("See results");
-    button1.position(width/2,(height/10)*9);
-    button1.touchStarted(results);
-    button1.align(CENTER);
-    textSize(height/20);
-    textAlign(CENTER);
-    textStyle(BOLD);
-        
     button2 = createButton("Try again");
     button2.position(width/2,height/2);
     button2.touchStarted(clearEverything);
@@ -78,8 +73,14 @@ function draw(){
     textAlign(CENTER);
     textStyle(BOLD);
         
-    rect(100,100,50,80);
-    fill(37, 51, 237);
+    button1 = createButton("See results");
+    button1.position(width/2,(height/10)*9);
+    button1.touchStarted(results);
+    button1.align(CENTER);
+    textSize(height/20);
+    textAlign(CENTER);
+    textStyle(BOLD);
+        
         
     }    
     
