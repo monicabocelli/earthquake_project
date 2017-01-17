@@ -63,7 +63,7 @@ function draw(){
     text(value, width/2, height - height/8);
 
     button1 = createButton("See results");
-    button1.position(width/2,height/3);
+    button1.position(width/2,(height/5)*6);
     button1.touchStarted(results);
          
     }    
