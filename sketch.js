@@ -1,6 +1,8 @@
 var dots = [];
-
-var value = 0;  //starting value of earthquake
+var energy = 0; //starting value of energy
+var singleShake = 0;
+var finished = false;
+var maxEnergy= 1000; //max energy for eathquake
 
 var button1;
 var button2;
@@ -28,14 +30,14 @@ function draw(){
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.1);    
     
-    var magnitude = int(map(value, 0, 500, 0, 10)); 
+    var magnitude = int(map(energy, 0, 1000, 0, 10)); 
     
-    if (value > 0){
+    if (energy > 0 && energy < maxEnergy){
         
         //CREATE THE ELLIPSE AREA
     var x = width/2;
     var y = height/2;
-    var r = value * 2; 
+    var r = energy * 2; 
     
     noFill();
     stroke(0);
@@ -59,7 +61,7 @@ function draw(){
     textSize(height/50);
     textAlign(CENTER);
     textStyle(NORMAL);    
-    text(value, width/2, height - height/8);
+    text(energy, width/2, height - height/8);
         
          //buttons  
           
@@ -75,13 +77,18 @@ function draw(){
    // button3.position(width/3,height/3);
    // button3.touchStarted(imagens);    
         
-    }
+    } else if (energy > maxEnergy) {
+    //display things
+    background(0);
+  } else {
+    background(204);
+  }
       
    
     //draw dots and given methods (actions)
       noStroke();
       fill(0);
-      for (var i = 0; i < value*100; i++){
+      for (var i = 0; i < energy * 100; i++){
         dots[i].move();
         dots[i]. display();
         
@@ -93,7 +100,12 @@ function draw(){
 
 function deviceShaken(){
     
-    value = (pAccelerationX * pAccelerationY * pAccelerationZ)/300;   
+   singleShake = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
+  //energy += singleShake;
+  
+  if (singleShake > 30){
+    energy += singleShake;
+  } else { finished == true;}
    
     //create objects
     for (var i = 0; i < value*100; i++){
@@ -103,11 +115,9 @@ function deviceShaken(){
 }
 
 
-function QuakeDots(){
-    
-    
+function QuakeDots(){ 
     var a = random(0,360);
-    var b = random(0,value * 1.6);
+    var b = random(0,energy * 1.6);
     var x = sin(a) * b; // mi dà un numero che va da -b a b
     var y = cos(a) * b; // mi dà un numero che va da -b a b
     var d = dist(width/2,height/2, width/2, height/2 + x/2);
@@ -138,21 +148,22 @@ this.display = function(){
     
     
     // result buttons
-      function results() {
+ function results() {
      image(myImage,0,0,windowWidth,windowHeight);
   
-    }
+ }
 
-    function clearEverything() {
+ function clearEverything() {
     background(204);
+    energy = 0;
  
-     }
+ }
 
 function windowResized(){
     resizeCanvas(windowWidth,windowHeight);
      }
 
-function touchMoved() {
-  // do some stuff
-  return false;
+ function touchMoved() {
+     // do some stuff
+      return false;
 }
