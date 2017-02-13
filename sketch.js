@@ -4,15 +4,15 @@ var singleShake = 0;
 var finished = false;
 var maxEnergy= 1000; //max energy for eathquake
 
-var button1;
-var button2;
-var button3;
-var myImage;
-var myResults;
+//var button1;
+//var button2;
+//var button3;
+//var myImage;
+//var myResults;
 
-function preload() {
-    myResult = loadImage("images/prova1.png");
-    myImage = loadImage("images/prova2.jpg");
+//function preload() {
+//    myResult = loadImage("images/prova1.png");
+//    myImage = loadImage("images/prova2.jpg");
 }
     
 function setup(){
@@ -29,7 +29,7 @@ function draw(){
      textStyle(BOLD);
      fill(0);
      noStroke();
-     text("SHAKE YOUR DEVICE", width/2,height - height/1.1);    
+     text("SHAKE YOUR DEVICE", width/5,height - height/2);    
     
     var magnitude = int(map(energy, 0, 1000, 0, 10)); 
     
@@ -66,13 +66,13 @@ function draw(){
         
          //buttons  
           
-    button1 = createButton("See results");
-    button1.position(width/7,(height/15)*14);
-    button1.touchStarted(results);
+  //  button1 = createButton("See results");
+  //  button1.position(width/7,(height/15)*14);
+  //  button1.touchStarted(results);
         
-    button2 = createButton("Try again");
-    button2.position((width/7)*5, (height/15)*14);
-    button2.touchStarted(clearEverything);
+  //  button2 = createButton("Try again");
+  //  button2.position((width/7)*5, (height/15)*14);
+  //  button2.touchStarted(clearEverything);
     
    // button3 = createButton('imagens');
    // button3.position(width/3,height/3);
@@ -95,7 +95,6 @@ function draw(){
         
       }
           
-
 
 }
 
@@ -150,16 +149,27 @@ this.display = function(){
     
     
     // result buttons
- function results() {
-     image(myImage,0,0,windowWidth,windowHeight);
+// function results() {
+//     image(myImage,0,0,windowWidth,windowHeight);
   
- }
+// }
 
- function clearEverything() {
-    background(204);
-    energy = 0;
+// function clearEverything() {
+ //   background(204);
+ //   energy = 0;
  
- }
+// }
+
+
+function reset() {
+
+  //set all the variables at original value
+  energy = 0;
+    
+    if (){
+   //energy += singleShake;
+  //} else { finished == true;}
+}
 
 function windowResized(){
     resizeCanvas(windowWidth,windowHeight);
