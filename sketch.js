@@ -101,11 +101,12 @@ function draw(){
 function deviceShaken(){
     
    singleShake = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
-  //energy += singleShake;
+  energy += singleShake;
   
-  if (singleShake > 30){
-    energy += singleShake;
-  } else { finished == true;}
+  //  if (singleShake > 30){
+   //energy += singleShake;
+  //} else { finished == true;}
+    
    
     //create objects
     for (var i = 0; i < value*100; i++){
