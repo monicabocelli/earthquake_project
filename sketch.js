@@ -59,10 +59,10 @@ function draw(){
     textStyle(BOLD);
     text(magnitude,width/2, height - height/6.7);
     
-    textSize(height/50);
-    textAlign(CENTER);
-    textStyle(NORMAL);    
-    text(energy, width/2, height - height/8);
+   // textSize(height/50);
+   // textAlign(CENTER);
+   // textStyle(NORMAL);    
+   // text(energy, width/2, height - height/8);
         
          //buttons  
           
